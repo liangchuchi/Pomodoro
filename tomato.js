@@ -60,9 +60,10 @@ function showtodo() {
     }else {
         length = getsaveTitleAry.length;
     }
-
-    todo.innerHTML = "";
   }
+
+  todo.innerHTML = "";
+
   for(let i = 0 ; i < 5 ; i++) {
     if(i < length){
       todo.innerHTML += '<div class="item"><i class="fas fa-arrow-right"></i><p>' + getsaveTitleAry[i] + "</p></div>";
@@ -83,10 +84,12 @@ function showtodo() {
     }else{
       length = getdoneTitleAry.length;
     }
-  
-    done.innerHTML = "";
   }
+
+  done.innerHTML = "";
+
   for (let i = 0; i < 5; i++) {
+    console.log("x");
     if (i < length) {
       done.innerHTML += '<div class="item"><i class="fas fa-check"></i><p>' + getdoneTitleAry[i] + "</p></div>";
     } else {
