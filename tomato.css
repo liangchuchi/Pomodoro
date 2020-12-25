@@ -1,0 +1,264 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+text-decoration: none;
+}
+del {
+text-decoration: line-through;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrap{
+    display: flex;
+}
+.header{
+    background:#283645;
+    height: 625px;
+    width: 500px;
+}
+.top{
+    padding: 30px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1.5;
+}
+.time h1{
+    color: #888b8e;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.time h2{
+    color: #e0e2e4;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+.list h1{
+    color: #888b8e;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.list h2{
+    color: #e0e2e4;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+.clock{
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: #212f3f;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+    border: 10px solid#1e2d3d;
+}
+.clock h1{
+    color: #f4d03f;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.clock h2{
+    color: #f4d03f;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pic a {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.pic a:nth-child(2) {
+    margin: 20px 60px;
+    font-size: 54px;
+}
+.circle {
+    border: 1px solid #FFF;
+    border-radius: 50%; 
+} 
+.content{
+    background: #32404e;
+    height: 625px;
+    width: 400px;
+    padding: 50px;
+}
+.add{
+    width: 130px;
+    height: 45px;
+    background: #f4d03f;
+    border-radius: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right; 
+    float: right;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.todo {
+    margin-top: 30px;
+    height: 250px;
+}
+.todo h2 {
+    color: #efd05c;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 10px 20px;
+    background-color: #1e2b3a;
+}
+.item i {
+    color: #efd05c;
+}
+.item p {
+    margin-left: 15px;
+    color: #fff;
+    font-family: sans-serif;
+}
+.done {
+    margin-top: 30px;
+    height: 250px;
+}
+.done h2 {
+    color: #efd05c;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.done .item p {
+    color: #9399a0;
+    text-decoration: line-through;
+    font-family: sans-serif;
+}
+.addTask{
+    width: 300px;
+    height: 465px;
+    background: #1b2a3b;
+    padding: 30px;
+    margin-top: 15px;
+}
+.newtask{
+    display: flex;
+}
+.newtask h1{
+    font-size: 18px;
+    color: #f4d03f;
+    padding: 25px 0;
+    font-family: sans-serif;
+}
+.titleContext h1{
+    font-size: 16px;
+    color: #cfd2d6;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+}
+.title {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.taskContent h1{
+    font-size: 16px;
+    color: #cfd2d6;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+}
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+.send,
+.cancel{
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 35px;
+    padding: 5px 0px;
+    border: 0;
+    width: 110px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.sidebar {
+    width: 5%;
+    background-color: #0f161d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+  .sidebar h1 {
+    color: #575b60;
+    writing-mode: vertical-lr;
+    font-size: 24px;
+    font-weight: bold;
+  }
+ 
+.clearfix {
+    clear: both;
+}
+
+
+
+
+

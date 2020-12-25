@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tomato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="top">
+                <div class="time">
+                    <h1>2019/07/12</h1>
+                    <h2>09:30</h2>
+                </div>
+                <div class="list">
+                    <h1>Done/To do</h1>
+                    <h2>5/10</h2>
+                </div>
+            </div>
+            <div class="clock">
+                <h1>-Start Work-</h1>
+                <h2>25:00</h2>
+            </div>
+            <div class="pic">
+                <a href="#" class="finish"><i class="fas fa-times"></i></a>
+                <a href="#" class="play"><i class="fas fa-play"></i></a>
+                <a href="#" class="redo"><i class="fas fa-redo"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="add-block">
+                <a href="#" class='add'><i class="fas fa-plus-circle" style="color:#3d443b">Add Task</i></a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="todo">
+                <h2>To Do</h2>
+                <div class="todolist">
+                </div>
+                <div class="done">
+                    <h2>Done</h2>
+                    <div class="donelist">
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                            <p>12331231232123</p>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                            <p>12331231232123</p>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                            <p>12331231232123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addTask" style="display: none;">
+                <div class="newtask">
+                    <h1>Add new task</h1>
+                    <a href="#"><i class="fas fa-times" style="color: white; font-size: 30px; margin-left: 100px;"></i></a>
+                </div>
+                <div class="titleContext">
+                    <h1>Title</h1>
+                    <input type="text" class="title" name="title" placeholder="The first task to do today!">
+                </div>
+                <div class="button">
+                    <input type="button" class="send" name="send" value="Send" style="background: #f4d03f;color: #323b3b;font-size: 25px;">
+                    <input type="button" class="cancel" name="Cancel" value="Cancel" style="color: #323b3b;font-size: 25px;">
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h1>POMODORO</h1>
+          </div>
+        </div>
+    </div>
+    <script src="tomato.js"></script>
+</body>
+
+</html>
