@@ -49,12 +49,12 @@ showtodo();
 function showtodo() {
   let saveTitleCount = 0 ;
   let doneTitleCount = 0 ;
+  let length = 0;
+  let todo = document.querySelector(".todolist");
+  let getsaveTitleAry = JSON.parse(localStorage.getItem('saveTitle'));
   //todo
   if(localStorage.getItem('saveTitle') != null) {
-    let getsaveTitleAry = JSON.parse(localStorage.getItem('saveTitle'));
     saveTitleCount = getsaveTitleAry.length;
-    let todo = document.querySelector(".todolist");
-    let length;
     if(getsaveTitleAry.length > 5) {
         length = 5;
     }else {
@@ -62,22 +62,22 @@ function showtodo() {
     }
 
     todo.innerHTML = "";
-
-    for(let i = 0 ; i < 5 ; i++) {
-      if(i < length){
-        todo.innerHTML += '<div class="item"><i class="fas fa-arrow-right"></i><p>' + getsaveTitleAry[i] + "</p></div>";
-      } else {
-        todo.innerHTML += '<div class="item"><i class="fas fa-arrow-right"></i><p></p></div>';
-      }
+  }
+  for(let i = 0 ; i < 5 ; i++) {
+    if(i < length){
+      todo.innerHTML += '<div class="item"><i class="fas fa-arrow-right"></i><p>' + getsaveTitleAry[i] + "</p></div>";
+    } else {
+      todo.innerHTML += '<div class="item"><i class="fas fa-arrow-right"></i><p></p></div>';
     }
   }
+  
 
+  length = 0;
+  let getdoneTitleAry = JSON.parse(localStorage.getItem('doneTitle'));
+  let done = document.querySelector('.donelist');
   //done
   if(localStorage.getItem("doneTitle") != null){
-    let getdoneTitleAry = JSON.parse(localStorage.getItem('doneTitle'));
     doneTitleCount = getdoneTitleAry.length;
-    let done = document.querySelector('.donelist');
-    let length;
     if(getdoneTitleAry.length >5){
       length = 5;
     }else{
@@ -85,15 +85,15 @@ function showtodo() {
     }
   
     done.innerHTML = "";
-
-    for (let i = 0; i < 5; i++) {
-      if (i < length) {
-        done.innerHTML += '<div class="item"><i class="fas fa-check"></i><p>' + getdoneTitleAry[i] + "</p></div>";
-      } else {
-        done.innerHTML += '<div class="item"><i class="fas fa-check"></i><p></p></div>';
-      }
+  }
+  for (let i = 0; i < 5; i++) {
+    if (i < length) {
+      done.innerHTML += '<div class="item"><i class="fas fa-check"></i><p>' + getdoneTitleAry[i] + "</p></div>";
+    } else {
+      done.innerHTML += '<div class="item"><i class="fas fa-check"></i><p></p></div>';
     }
   }
+  
   // 上方文字
   document.querySelector(".list h2").innerHTML = doneTitleCount + " / " + saveTitleCount;
 }
